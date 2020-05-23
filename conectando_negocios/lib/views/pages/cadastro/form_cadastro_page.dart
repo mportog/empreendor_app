@@ -22,10 +22,7 @@ class _FormCadastroPageState extends State<FormCadastroPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 20,
-                ),
-                SizedBox(height: 20),
+                SizedBox(height: 40),
                 TextField(
                   decoration: InputDecoration(
                       labelText: 'CPF ou CNPJ:',
