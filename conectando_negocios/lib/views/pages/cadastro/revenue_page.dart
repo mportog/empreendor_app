@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class AddressPage extends StatefulWidget {
+class RevenuePage extends StatefulWidget {
   @override
-  _AddressPageState createState() => _AddressPageState();
+  _RevenuePageState createState() => _RevenuePageState();
 }
 
-class _AddressPageState extends State<AddressPage> {
+class _RevenuePageState extends State<RevenuePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +13,7 @@ class _AddressPageState extends State<AddressPage> {
         automaticallyImplyLeading: true,
         centerTitle: true,
         elevation: 5,
-        title: Text('Cadastro'),
+        title: Text('Cadastro: Renda'),
       ),
       body: Container(
           child: SingleChildScrollView(
@@ -27,43 +27,22 @@ class _AddressPageState extends State<AddressPage> {
               ),
               SizedBox(height: 20),
               TextField(
-                enabled: true,
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
-                    labelText: 'CEP:', prefix: Icon(Icons.location_on)),
+                    labelText: 'Renda mensal:',
+                    prefix: Icon(Icons.monetization_on)),
               ),
               SizedBox(height: 20),
               TextField(
-                enabled: false,
-                decoration: InputDecoration(labelText: 'Endereço:'),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                enabled: false,
-                decoration: InputDecoration(labelText: 'Cidade:'),
-              ),
-              SizedBox(height: 20),
-              TextField(
-                enabled: false,
-                decoration: InputDecoration(labelText: 'Estado:'),
-              ),
-              TextField(
-                enabled: true,
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
                 decoration: InputDecoration(
-                    labelText: 'Número:', prefix: Icon(Icons.location_city)),
+                    labelText: 'Profissão:', prefix: Icon(Icons.work)),
               ),
               SizedBox(height: 20),
               Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
-                    FlatButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Digitar endereço completo',
-                          style: TextStyle(color: Colors.grey),
-                        )),
                     RaisedButton(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),

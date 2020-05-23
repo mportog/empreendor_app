@@ -14,7 +14,7 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
         automaticallyImplyLeading: true,
         centerTitle: true,
         elevation: 5,
-        title: Text('Cadastro'),
+        title: Text('Cadastro: Tipo'),
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,

@@ -15,7 +15,7 @@ class _PhotoIdPageState extends State<PhotoIdPage> {
           automaticallyImplyLeading: true,
           centerTitle: true,
           elevation: 5,
-          title: Text('Cadastro'),
+          title: Text('Cadastro: Identidade'),
         ),
         body: Container(
             width: width,

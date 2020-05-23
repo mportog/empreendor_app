@@ -1,7 +1,4 @@
-import 'package:conectando_negocios/views/pages/addres_page.dart';
-import 'package:conectando_negocios/views/pages/form_cadastro_page.dart';
-import 'package:conectando_negocios/views/pages/photo_id_page.dart';
-import 'package:conectando_negocios/views/pages/type_cadastro_page.dart';
+import 'package:conectando_negocios/views/pages/analysis_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,6 +22,9 @@ class EmpreendedorConecta extends StatelessWidget {
             // home: TypeCadastroPage()
             // home: FormCadastroPage()
             // home: PhotoIdPage()
-            home: AddressPage());
+            // home: AddressPage()
+            // home: RevenuePage()
+            // home: AnalysisPage()
+            home: AnalysisPage());
   }
 }

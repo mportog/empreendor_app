@@ -13,7 +13,7 @@ class _FormCadastroPageState extends State<FormCadastroPage> {
           automaticallyImplyLeading: true,
           centerTitle: true,
           elevation: 5,
-          title: Text('Cadastro'),
+          title: Text('Cadastro: Pessoal'),
         ),
         body: Container(
             child: SingleChildScrollView(
