@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "337395126080",
+    "firebase_url": "https://empreendedor-app.firebaseio.com",
+    "project_id": "empreendedor-app",
+    "storage_bucket": "empreendedor-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337395126080:android:683687eb8bc9b41c22b4a5",
+        "android_client_info": {
+          "package_name": "com.example.conectando_negocios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337395126080-ks7pog769ta0j37d7qk0iv1sv7b2eof7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.conectando_negocios",
+            "certificate_hash": "3188f277fc763d8e46ed522feb4771040ff60e2f"
+          }
+        },
+        {
+          "client_id": "337395126080-0tjkti7p00qllf2tomlj7ps4fjfju7ce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfvWiAC5UlrtyUhKjS5Q9VX6ipDNwDK84"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337395126080-0tjkti7p00qllf2tomlj7ps4fjfju7ce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

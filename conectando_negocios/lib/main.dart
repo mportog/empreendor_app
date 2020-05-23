@@ -1,13 +1,7 @@
-import 'package:conectando_negocios/views/pages/analysis_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/addres_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/bussines_idea_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/form_cadastro_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/photo_id_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/revenue_page.dart';
-import 'package:conectando_negocios/views/pages/cadastro/type_cadastro_page.dart';
-import 'package:conectando_negocios/views/pages/connect_plan_page.dart';
+import 'package:conectando_negocios/controllers/login_store.dart';
 import 'package:conectando_negocios/views/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(EmpreendedorConecta());
@@ -16,17 +10,15 @@ void main() {
 class EmpreendedorConecta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return
-        // MultiProvider(
-        //   providers: [
-        // Provider<LoginStore>(create: (_) => LoginStore()),
-        //   ],
-        //   child:
-        MaterialApp(
+    return MultiProvider(
+        providers: [
+          Provider<LoginStore>(create: (_) => LoginStore()),
+        ],
+        child: MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Empreendedor Conecta',
             theme: ThemeData(primarySwatch: Colors.indigo),
-            // home: LoginPage()
+            home: LoginPage()
             // home: TypeCadastroPage()
             // home: FormCadastroPage()
             // home: PhotoIdPage()
@@ -34,6 +26,7 @@ class EmpreendedorConecta extends StatelessWidget {
             // home: RevenuePage()
             // home: AnalysisPage()
             // home: BusinessPage()
-            home: ConnectPlanPage());
+            // home: ConnectPlanPage()
+            ));
   }
 }

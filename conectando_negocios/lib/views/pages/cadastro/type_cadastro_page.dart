@@ -7,6 +7,11 @@ class TypeCadastroPage extends StatefulWidget {
 
 class _TypeCadastroPageState extends State<TypeCadastroPage> {
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -14,7 +19,7 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
         automaticallyImplyLeading: true,
         centerTitle: true,
         elevation: 5,
-        title: Text('Cadastro: Tipo'),
+        title: Text('Cadastro: Tipo usuário'),
       ),
       body: Container(
           width: MediaQuery.of(context).size.width,
@@ -40,9 +45,7 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          onPressed: () {
-                            print('Clicado em investimentos');
-                          },
+                          onPressed: null,
                           child: Card(
                             elevation: 5,
                             shape: RoundedRectangleBorder(
