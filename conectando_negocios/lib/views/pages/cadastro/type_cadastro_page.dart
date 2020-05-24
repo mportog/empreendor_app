@@ -1,4 +1,7 @@
+import 'package:conectando_negocios/controllers/account_businnes_store.dart';
+import 'package:conectando_negocios/views/pages/cadastro/personal_info_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TypeCadastroPage extends StatefulWidget {
   @override
@@ -9,8 +12,10 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    _businessStore = Provider.of<AccountBusinessStore>(context);
   }
 
+  AccountBusinessStore _businessStore;
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
@@ -45,7 +50,7 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          onPressed: null,
+                          onPressed: _investee,
                           child: Card(
                             elevation: 5,
                             shape: RoundedRectangleBorder(
@@ -83,9 +88,7 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0),
                           ),
-                          onPressed: () {
-                            print('Clicado em investidores');
-                          },
+                          onPressed: _investor,
                           child: Card(
                             elevation: 5,
                             shape: RoundedRectangleBorder(
@@ -120,5 +123,18 @@ class _TypeCadastroPageState extends State<TypeCadastroPage> {
             ],
           )),
     );
+  }
+
+  void _nextPage() => Navigator.push(
+      context, MaterialPageRoute(builder: (context) => FormCadastroPage()));
+
+  void _investee() {
+    _businessStore.setTypeInvestee();
+    _nextPage();
+  }
+
+  void _investor() {
+    _businessStore.setTypeInvestor();
+    _nextPage();
   }
 }
