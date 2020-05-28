@@ -1,3 +1,4 @@
+import 'package:conectando_negocios/views/pages/connect_plan_page.dart';
 import 'package:conectando_negocios/views/widgets/image_source_sheet.dart';
 import 'package:flutter/material.dart';
 
@@ -85,7 +86,20 @@ class _PhotoIdPageState extends State<PhotoIdPage> {
                         },
                       )
                     ],
-                  ))
+                  )),
+                  RaisedButton(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ConnectPlanPage())),
+                    child: Center(
+                        child: Text('CONTINUAR',
+                            style: TextStyle(color: Colors.white))),
+                    color: Colors.indigoAccent,
+                  ),
                 ])));
   }
 }

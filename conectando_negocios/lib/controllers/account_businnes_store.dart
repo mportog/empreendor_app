@@ -1,4 +1,4 @@
-import 'package:conectando_negocios/repositories/business_repository.dart';
+// import 'package:conectando_negocios/repositories/business_repository.dart';
 import 'package:mobx/mobx.dart';
 part 'account_businnes_store.g.dart';
 
@@ -6,10 +6,10 @@ class AccountBusinessStore = _AccountBusinessStoreBase
     with _$AccountBusinessStore;
 
 abstract class _AccountBusinessStoreBase with Store {
-  BusinessRepository _businessRepository;
-  _AccountBusinessStoreBase() {
-    _businessRepository = BusinessRepository();
-  }
+  // BusinessRepository _businessRepository;
+  // _AccountBusinessStoreBase() {
+  //   _businessRepository = BusinessRepository();
+  // }
 
   @observable
   int typeInvest = 0;

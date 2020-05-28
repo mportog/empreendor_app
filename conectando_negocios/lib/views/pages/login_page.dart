@@ -1,4 +1,5 @@
 import 'package:conectando_negocios/controllers/login_store.dart';
+import 'package:conectando_negocios/views/pages/analysis_page.dart';
 import 'package:conectando_negocios/views/pages/cadastro/type_cadastro_page.dart';
 import 'package:conectando_negocios/views/widgets/backgound.dart';
 import 'package:flutter/material.dart';
@@ -92,17 +93,23 @@ class _LoginPageState extends State<LoginPage> {
                                         fontWeight: FontWeight.bold))),
                         color: Colors.indigoAccent)),
                 RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5.0)),
-                    textColor: Colors.grey,
-                    onPressed: () {},
-                    child: Text('CADASTRAR'),
-                    color: Colors.white)
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0)),
+                  textColor: Colors.grey,
+                  onPressed: _createAccount,
+                  child: Text('CADASTRAR'),
+                )
               ]))
     ])));
   }
 
   void _loggedIn() {
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => AnalysisPage()));
+  }
+
+  void _createAccount() {
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => TypeCadastroPage()));
   }

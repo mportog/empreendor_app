@@ -1,15 +1,15 @@
-import 'package:conectando_negocios/repositories/personal_repository.dart';
+// import 'package:conectando_negocios/repositories/personal_repository.dart';
 import 'package:mobx/mobx.dart';
 part 'personal_info_store.g.dart';
 
 class PersonalStore = _PersonalStoreBase with _$PersonalStore;
 
 abstract class _PersonalStoreBase with Store {
-  PersonalInfoRepository _businnessRepository;
+  // PersonalInfoRepository _businnessRepository;
 
-  _PersonalStoreBase() {
-    _businnessRepository = PersonalInfoRepository();
-  }
+  // _PersonalStoreBase() {
+  //   _businnessRepository = PersonalInfoRepository();
+  // }
 
   @observable
   String cpfNnpj = '';
@@ -23,7 +23,10 @@ abstract class _PersonalStoreBase with Store {
   String email = '';
   @observable
   String confirmMail = '';
-
+  @observable
+  String senha = '';
+  @observable
+  String confirmSenha = '';
   DateTime dateOfBirth;
 
   @action
@@ -38,10 +41,19 @@ abstract class _PersonalStoreBase with Store {
   String setEmail(String value) => email = value;
   @action
   String setConfirmMail(String value) => confirmMail = value;
+  @action
+  String setSenha(String value) => senha = value;
+  @action
+  String setConfirmSenha(String value) => confirmSenha = value;
 
   @computed
   String get getEmailConfirm =>
       email == confirmMail ? null : 'Email deve ser igual';
+
+  @computed
+  String get getSenhaConfirm =>
+      senha == confirmSenha ? null : 'Senhas devem ser iguais';
+
   @computed
   String get getBirthConfirm {
     if (birth.isNotEmpty) {

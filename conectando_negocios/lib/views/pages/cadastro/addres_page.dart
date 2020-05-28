@@ -1,4 +1,5 @@
 import 'package:conectando_negocios/controllers/address_store.dart';
+import 'package:conectando_negocios/views/pages/cadastro/revenue_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
@@ -103,7 +104,12 @@ class _AddressPageState extends State<AddressPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RevenuePage()));
+                      },
                       child: Text('CONTINUAR',
                           style: TextStyle(color: Colors.white)),
                       color: Colors.indigoAccent,

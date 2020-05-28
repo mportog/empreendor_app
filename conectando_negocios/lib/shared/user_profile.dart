@@ -3,7 +3,7 @@ import 'package:conectando_negocios/models/business.dart';
 import 'package:conectando_negocios/models/login.dart';
 import 'package:conectando_negocios/models/personal.dart';
 import 'package:conectando_negocios/models/revenue.dart';
-import 'package:conectando_negocios/models/user_data_model.dart';
+// import 'package:conectando_negocios/models/user_data_model.dart';
 
 class UserProfile {
   static final UserProfile _singleton = new UserProfile._internal();
@@ -16,14 +16,14 @@ class UserProfile {
   Personal personal = Personal();
   Revenue revenue = Revenue();
 
-  UserModel _userModel;
+  // UserModel _userModel;
 
-  void setUserModel() {
-    _userModel = UserModel(
-        login: this.login,
-        address: this.address,
-        businness: this.businness,
-        revenue: this.revenue,
-        personal: this.personal);
-  }
+  // void setUserModel() {
+  //   _userModel = UserModel(
+  //       login: this.login,
+  //       address: this.address,
+  //       businness: this.businness,
+  //       revenue: this.revenue,
+  //       personal: this.personal);
+  // }
 }

@@ -4,8 +4,6 @@ import 'package:conectando_negocios/models/cep.dart';
 import 'package:http/http.dart' as http;
 
 class AddressRepository {
-//     final FirebaseAuth _auth = FirebaseAuth.instance;
-//   final UserProfile _userModel = UserProfile.getInstance();
   Future<Cep> getFromApi(String endPoint) async {
     try {
       String completUrl = 'https://viacep.com.br/ws/$endPoint/json/';

@@ -1,3 +1,4 @@
+import 'package:conectando_negocios/views/pages/cadastro/photo_id_page.dart';
 import 'package:conectando_negocios/views/widgets/multiline_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +61,12 @@ class _BusinessPageState extends State<BusinessPage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(5.0),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => PhotoIdPage()));
+                              },
                               child: Text('CONTINUAR',
                                   style: TextStyle(color: Colors.white)),
                               color: Colors.indigoAccent,

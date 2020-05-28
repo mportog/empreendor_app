@@ -35,7 +35,25 @@ abstract class _LoginStoreBase with Store {
     error = email.length > 5
         ? pass.length > 4 ? '' : 'Tamanho minimo de senha (4) não atingido'
         : 'email com erros';
-    if (error.isEmpty) loggedIn = await _loginRepository.getLogin(email, pass);
+    try {
+      if (error.isEmpty)
+        loggedIn = await _loginRepository.getLogin(email, pass);
+    } catch (e) {} finally {
+      isLoading = false;
+    }
+  }
+
+  @action
+  createAccount(String user, String pass) async {
+    isLoading = true;
+    this.email = user;
+    this.pass = pass;
+    error = '';
+    error = email.length > 5
+        ? pass.length > 4 ? '' : 'Tamanho minimo de senha (6) não atingido'
+        : 'email com erros';
+    if (error.isEmpty)
+      loggedIn = await _loginRepository.createUser(email, pass);
     isLoading = false;
   }
 }

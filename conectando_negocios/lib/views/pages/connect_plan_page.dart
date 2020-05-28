@@ -1,3 +1,4 @@
+import 'package:conectando_negocios/views/pages/analysis_page.dart';
 import 'package:conectando_negocios/views/widgets/backgound.dart';
 import 'package:flutter/material.dart';
 
@@ -58,7 +59,12 @@ class ConnectPlanPage extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AnalysisPage()));
+                      },
                       child: Text('ASSINAR',
                           style: TextStyle(color: Colors.white)),
                       color: Colors.indigoAccent,
