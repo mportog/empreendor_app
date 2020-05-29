@@ -1,5 +1,6 @@
+import 'package:conectando_negocios/views/pages/home/chat_widgets/chat_widget.dart';
 import 'package:conectando_negocios/views/pages/home/extrato_widgets/extract_widgets.dart';
-import 'package:conectando_negocios/views/pages/home/principal_page_widget.dart';
+import 'package:conectando_negocios/views/pages/home/principal_widgets/principal_page_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,10 +15,7 @@ class _HomePageState extends State<HomePage> {
   static List<Widget> _widgetOptions = <Widget>[
     PrincipalPageWidget(),
     TransactionExtractPage(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    ChatWidgetPage(),
     Text(
       'Index 2: School',
       style: optionStyle,
